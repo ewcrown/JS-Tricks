@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Reverse A Number</title>
+</head>
+
+<div id="showNumber">
+
+</div>
+
+<body>
+    <script>
+        const show = document.getElementById('showNumber')
+        const number = 1354
+
+        const reverseNumber = (number) => {
+
+            if (typeof (number) === 'number') {
+                let arr = Array.from(String(number))
+                show.textContent = arr.reverse()
+            } else {
+                let arr = Array.from(number)
+                show.textContent = arr.reverse()
+            }
+
+        }
+
+        reverseNumber(number)
+    </script>
+</body>
+
+</html>
