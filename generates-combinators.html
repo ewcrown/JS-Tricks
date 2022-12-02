@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generates Combinators</title>
+</head>
+
+<body>
+    <div id="combinators"></div>
+
+
+    <script>
+        // let stringCombinations = (str) => {
+        //     let strLength = str.length;
+        //     let result = [];
+        //     let currentIndex = 0;
+
+
+        //     while (currentIndex < strLength) {
+        //         let char = str[currentIndex];
+        //         let arrTemp = [char];
+
+        //         for (let x in result) {
+        //             // console.log(result[x])
+        //             console.log(arrTemp)
+        //             arrTemp.push(result[x] + char);
+        //         }
+
+        //         result = result.concat(arrTemp);
+        //         currentIndex++;
+        //     }
+
+        //     return result;
+
+        // };
+        // console.log(stringCombinations("ABC"));
+
+        const str = "ABC"
+
+        const combinations = (str) => {
+            let strLength = str.length
+            let arr = []
+            let char = str[0]
+            let endChar = str.length - 1
+            let concatChar = [char, endChar]
+            let i;
+            let j;
+
+            for (i = 0; i < strLength; i++) {
+
+
+
+                for (j = i + 1; j < strLength; j++) {
+                    console.log(str.slice(i, j))
+                }
+
+            }
+
+            console.log(arr.concat(concatChar))
+        }
+
+        combinations(str)
+    </script>
+</body>
+
+</html>
